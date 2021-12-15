@@ -14,10 +14,8 @@ executors:
     docker:
       - image: shopizerecomm/ci:latest
         auth:
-          username: irwansarwaji
-          password: Testtest123
-          # username: shopizerecomm
-          # password: $DOCKERHUB_PASSWORD  
+          username: shopizerecomm
+          password: $DOCKERHUB_PASSWORD  
       
 working_directory: /tmp
 
@@ -55,10 +53,8 @@ jobs:
        # with credentials stored in the UI
        - run: |
            ls -al
-      #  - run: |
-      #      docker login -u shopizerecomm -p $DOCKERHUB_PASSWORD
-        - run: |
-           docker login -u irwansarwaji -p Testtest123
+       - run: |
+           docker login -u shopizerecomm -p $DOCKERHUB_PASSWORD
        - run: |
            (cd sm-shop && docker build . -t shopizerecomm/shopizer:latest)
        - run: |
