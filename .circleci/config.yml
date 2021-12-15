@@ -55,8 +55,10 @@ jobs:
        # with credentials stored in the UI
        - run: |
            ls -al
-       - run: |
-           docker login -u shopizerecomm -p $DOCKERHUB_PASSWORD
+      #  - run: |
+      #      docker login -u shopizerecomm -p $DOCKERHUB_PASSWORD
+        - run: |
+           docker login -u irwansarwaji -p Testtest123
        - run: |
            (cd sm-shop && docker build . -t shopizerecomm/shopizer:latest)
        - run: |
