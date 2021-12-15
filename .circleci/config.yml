@@ -14,8 +14,10 @@ executors:
     docker:
       - image: shopizerecomm/ci:latest
         auth:
-          username: shopizerecomm
-          password: $DOCKERHUB_PASSWORD  
+          username: irwansarwaji
+          password: Testtest123
+          # username: shopizerecomm
+          # password: $DOCKERHUB_PASSWORD  
       
 working_directory: /tmp
 
